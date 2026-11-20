@@ -1,0 +1,32 @@
+screen_id: deadly_assault_prepare_main
+screen_name: 危局预处理-主界面
+app_id: deadly_assault_prepare
+pc_alt: false
+area_list:
+  - area_name: 选定敌方
+    pc_rect: [1620, 990, 1780, 1050]
+    text: 选定敌方
+    lcs_percent: 0.7
+  - area_name: 配队指引
+    pc_rect: [1340, 990, 1500, 1050]
+    text: 配队指引
+    lcs_percent: 0.7
+  - area_name: 重置全部关卡
+    pc_rect: [1020, 990, 1220, 1050]
+    text: 重置全部关卡
+    lcs_percent: 0.7
+  - area_name: 荣誉酬赏
+    pc_rect: [60, 1010, 180, 1070]
+    text: 荣誉酬赏
+    lcs_percent: 0.7
+  - area_name: 槽位-左
+    pc_rect: [500, 850, 750, 950]
+  - area_name: 槽位-中
+    pc_rect: [950, 850, 1200, 950]
+  - area_name: 槽位-右
+    pc_rect: [1400, 850, 1650, 950]
+  - area_name: 返回
+    pc_rect: [82, 13, 150, 90]
+    template_sub_dir: menu
+    template_id: back
+    template_match_threshold: 0.7

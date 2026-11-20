@@ -1,0 +1,23 @@
+{
+  "id": "deadly_assault_prepare",
+  "name": "危局强袭战-预处理",
+  "summary": "一条龙前置预处理：触发危局强袭战智能推荐「生成更多」（不等待）后返回大世界，配合「危局强袭战-战斗」实现无等待后台算队。",
+  "version": "1.0.0",
+  "versionCode": 1,
+  "author": {
+    "name": "PoorKid1112",
+    "url": "https://github.com/PoorKid1112"
+  },
+  "homepage": "https://github.com/PoorKid1112/zzz-deadly-assault-prepare",
+  "cover": "assets/cover.webp",
+  "risk": [
+    "automation",
+    "ocr",
+    "filesystem"
+  ],
+  "compatibility": {
+    "minAppVersion": "2.0.0",
+    "minCoreApiVersion": 1,
+    "python": ">=3.11"
+  }
+}

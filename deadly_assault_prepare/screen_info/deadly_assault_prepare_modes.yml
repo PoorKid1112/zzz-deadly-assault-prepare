@@ -1,0 +1,24 @@
+screen_id: deadly_assault_prepare_modes
+screen_name: 危局预处理-模式选择
+app_id: deadly_assault_prepare
+pc_alt: false
+area_list:
+  - area_name: 列表-危局强袭战
+    pc_rect: [200, 540, 420, 620]
+    text: 危局强袭战
+    lcs_percent: 0.7
+  - area_name: 试炼-卡片
+    pc_rect: [480, 350, 1560, 540]
+  - area_name: 试炼-前往
+    pc_rect: [1420, 460, 1540, 520]
+    text: 前往
+    lcs_percent: 0.7
+  - area_name: 传送-确认
+    pc_rect: [1050, 590, 1200, 660]
+    text: 确认
+    lcs_percent: 0.7
+  - area_name: 返回
+    pc_rect: [82, 13, 150, 90]
+    template_sub_dir: menu
+    template_id: back
+    template_match_threshold: 0.7

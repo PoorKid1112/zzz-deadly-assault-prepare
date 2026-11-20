@@ -1,0 +1,29 @@
+screen_id: deadly_assault_prepare_guide
+screen_name: 危局预处理-配队指引
+app_id: deadly_assault_prepare
+pc_alt: false
+area_list:
+  - area_name: 返回
+    pc_rect: [82, 13, 150, 90]
+    template_sub_dir: menu
+    template_id: back
+    template_match_threshold: 0.7
+  - area_name: 规则说明
+    pc_rect: [500, 250, 680, 320]
+    text: 规则说明
+    lcs_percent: 0.7
+  - area_name: 规则说明-关闭
+    pc_rect: [1320, 220, 1450, 330]
+    template_sub_dir: menu
+    template_id: btn_close
+    template_match_threshold: 0.7
+  - area_name: 智能推荐
+    pc_rect: [1500, 25, 1660, 75]
+    text: 智能推荐
+    lcs_percent: 0.7
+  - area_name: 生成更多
+    pc_rect: [860, 25, 1020, 75]
+    text: 生成更多
+    lcs_percent: 0.7
+  - area_name: 全部应用-区域
+    pc_rect: [1480, 550, 1700, 900]

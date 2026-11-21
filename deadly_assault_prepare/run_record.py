@@ -88,7 +88,7 @@ class DeadlyAssaultPrepareRunRecord(AppRunRecord):
         return recorded_period != self.get_period_start_dt(current_dt)
 
     def _is_sibling_finished_for_period(self, sibling_app_id: str, target_period: str) -> bool:
-        """检查完整模式或战斗模式在当前 14 天周期是否已完成。"""
+        """检查完整模式在当前 14 天周期是否已完成完整战斗与领奖。"""
         if self.file_path is None:
             return False
         sibling_path = os.path.join(os.path.dirname(self.file_path), f'{sibling_app_id}.yml')
@@ -110,18 +110,17 @@ class DeadlyAssaultPrepareRunRecord(AppRunRecord):
 
         if sib_period != target_period:
             return False
-        return data.get('run_status') == AppRunRecord.STATUS_SUCCESS
+        if bool(data.get('prepare_only_pending', False)):
+            return False
+        return bool(data.get('full_completed', False)) or data.get('run_status') == AppRunRecord.STATUS_SUCCESS
 
     @property
     def is_finished_by_period(self) -> bool:
-        """当前周期已完成预处理，或者完整模式/战斗模式已通关本周期时返回 True。"""
+        """当前周期已完成预处理，或者完整模式已通关本周期时返回 True。"""
         current_period = self.get_period_start_dt(self.get_current_dt())
         if not self._should_reset_by_dt() and self.run_status == AppRunRecord.STATUS_SUCCESS:
             return True
-        return (
-            self._is_sibling_finished_for_period('deadly_assault', current_period)
-            or self._is_sibling_finished_for_period('deadly_assault_battle', current_period)
-        )
+        return self._is_sibling_finished_for_period('deadly_assault', current_period)
 
     @property
     def is_done(self) -> bool:

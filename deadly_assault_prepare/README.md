@@ -37,3 +37,9 @@
 | 配置项 | 类型 | 默认值 | 说明 |
 | :--- | :---: | :---: | :--- |
 | `cycle_anchor_dt` | `str` | `"20261120"` | 双周周五刷新基准日（`yyyyMMdd`，默认对应周五 04:00 刷新锚点） |
+
+---
+
+## 相关讨论
+
+- 主仓库功能建议：[OneDragon-Anything/ZenlessZoneZero-OneDragon#3020](https://github.com/OneDragon-Anything/ZenlessZoneZero-OneDragon/issues/3020)
